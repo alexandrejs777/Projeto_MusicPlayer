@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="./Style/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <audio id="audio">
+            <source id="audioSource" src="" type="audio/mp3">
+        </audio>
+
+        <div class="player">
+
+            <h1>Gospel Music Player</h1>
+
+            <h2 id="trackName"></h2>
+
+            <h3 id="artistName"></h3>
+
+            <input type="range" class="range" name="" id="timeRange" min="0" max="">
+
+            <img id="btnBackward" src="./Assets/Images/2x/backward.png" alt="" class="button" onclick="previousTrack()">
+            <img id="btnPlayAndPause" src="./Assets/Images/2x/play.png" alt="" class="button" onclick="play()">
+            <img id="btnStop" src="./Assets/Images/2x/stop.png" alt="" class="button" onclick="stop()">
+            <img id="btnForward" src="./Assets/Images/2x/forward.png" alt="" class="button" onclick="nextTrack()">
+
+            <input type="range" class="range" name="" id="volumeRange" min="0" max="100">
+        </div>
+
+    </div>
+    <script src="./Script/script.js"></script>
+</body>
+
+</html>
