@@ -4,26 +4,81 @@ let btnPlayAndPause = document.getElementById("btnPlayAndPause");
 let trackName = document.getElementById("trackName");
 let artistName = document.getElementById("artistName");
 let timeRange = document.getElementById("timeRange");
+let timelapse = document.getElementById("timelapse");
 let volumeRange = document.getElementById("volumeRange");
 
 var tracks = [
     {
         title: "Sonda-me, Usa-me",
         singer: "Aline Barros",
-        file: "./Assets/Music/Aline barros - Sonda-me, Usa-me.mp3",
+        file: "./Assets/Music/Sonda-me, Usa-me - Aline Barros.mp3",
     }
     ,
     {
         title: "Preciso de Ti",
         singer: "Ana Paula Valadão",
-        file: "./Assets/Music/PRECISO DE TI - DIANTE DO TRONO.mp3",
+        file: "./Assets/Music/Preciso de Ti - Ana Paula Valadao.mp3",
     }
     ,
     {
         title: "Tua Graça Me Basta",
         singer: "Davi Sacer",
-        file: "./Assets/Music/yDavi Sacer - Tua Graça me Basta.mp3",
+        file: "./Assets/Music/Tua Graça me Basta - Davi Sacer.mp3",
+    },
+    {
+        title: "Raridade",
+        singer: "Anderson Freire",
+        file: "./Assets/Music/Raridade - Anderson Freire.mp3",
     }
+    ,
+    {
+        title: "Hosana",
+        singer: "Gabriela Rocha & Lukas Agustinho",
+        file: "./Assets/Music/Hosana - Gabriela Rocha & Lukas Agustinho.mp3",
+    }
+    ,
+    {
+        title: "Teu Reino",
+        singer: "Cristo Vivo",
+        file: "./Assets/Music/Teu Reino - Cristo Vivo.mp3",
+    }
+    ,
+    {
+        title: "Deus da Minha Vida",
+        singer: "Thalles Roberto",
+        file: "./Assets/Music/Deus Da Minha Vida - Thalles Roberto.mp3",
+    }
+    ,
+    {
+        title: "Alívio",
+        singer: "Jessé Aguiar",
+        file: "./Assets/Music/Alivio - Jesse Aguiar.mp3",
+    }
+    ,
+    {
+        title: "Deus Proverá",
+        singer: "Gabriela Gomes",
+        file: "./Assets/Music/Deus Provera - Gabriela Gomes.mp3",
+    }
+    ,
+    {
+        title: "Sobre as Águas",
+        singer: "Davi Sacer",
+        file: "./Assets/Music/Sobre as Aguas - Davi Sacer.mp3",
+    }
+    ,
+    {
+        title: "Caminho no Deserto",
+        singer: "Soraya Moraes",
+        file: "./Assets/Music/Caminho no Deserto - Soraya Moraes.mp3",
+    }
+    ,
+    {
+        title: "Eu Escolho Deus",
+        singer: "Thalles Roberto",
+        file: "./Assets/Music/Eu Escolho Deus - Thalles Roberto.mp3",
+    }
+    ,
 ]
 
 let index = 0;
@@ -35,6 +90,7 @@ function audioPlayer(index){
     audioSource.src = tracks[index].file;
 
     audio.load();
+
 }
 
 audioPlayer(index);
@@ -42,6 +98,7 @@ audioPlayer(index);
 let audioPlaying = false;
 
 function previousTrack() {
+
     if (index == 0){
         index = tracks.length;
         audioPlayer(index);
@@ -53,6 +110,7 @@ function previousTrack() {
         audioPlaying = false;
         play();
     }
+
 }
 
 function play() {
@@ -70,13 +128,16 @@ function play() {
 }
 
 function stop() {
+
     audio.pause();
     btnPlayAndPause.setAttribute("src", "./Assets/Images/2x/play.png");
     audio.currentTime = 0;
     return audioPlaying = false;
+
 }
 
 function nextTrack() {
+
     if (index == tracks.length){
         index = 0;
         audioPlayer(index);
@@ -88,29 +149,45 @@ function nextTrack() {
         audioPlaying = false;   
         play();
     }
+
 }
 
 function autoMusicChange(){
+
     let totalTime = audio.duration;
     let currentTime = audio.currentTime;
 
     if (currentTime == totalTime){
         nextTrack();
     }
+
 }
 
 timeRange.addEventListener("input", time);
 
 function time(){
-    audio.currentTime = timeRange.value; 
+
+    audio.currentTime = timeRange.value;
+
 }
 
 function timeChange(){
+
     timeRange.max = audio.duration;
     timeRange.value = audio.currentTime;
 
-    autoMusicChange();
+    let minutes = Math.floor(audio.currentTime / 60);
+    let seconds = Math.round(audio.currentTime % 60);
+    let minutesTotal = Math.floor(audio.duration / 60);
+    let secondsTotal = Math.round(audio.duration % 60);
+
+    timelapse.innerText = minutes + ":" + seconds + " / " + minutesTotal + ":" + secondsTotal;
+
+    autoMusicChange(); 
+
 }
+
+
 
 setInterval(timeChange, 1000)
 
@@ -122,4 +199,5 @@ function volumeChange(){
     volumeStatus = volumeRange.value/100;
 
     audio.volume = volumeStatus;
+
 }
