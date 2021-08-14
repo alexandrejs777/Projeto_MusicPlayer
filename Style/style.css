@@ -88,7 +88,13 @@ h1, h2, h3 {
 
 .volume {
     display:flex;
-    margin-right: 5px;
+    align-items: center;
+    padding-right: 20px;
+}
+
+span {
+    width: 30px;
+    color: white;
 }
 
 h1 {

@@ -6,6 +6,7 @@ let artistName = document.getElementById("artistName");
 let timeRange = document.getElementById("timeRange");
 let timelapse = document.getElementById("timelapse");
 let volumeRange = document.getElementById("volumeRange");
+let volumeValue = document.getElementById("volumeValue");
 
 var tracks = [
     {
@@ -79,6 +80,11 @@ var tracks = [
         file: "./Assets/Music/Eu Escolho Deus - Thalles Roberto.mp3",
     }
     ,
+    {
+        title: "Maranata",
+        singer: "Avivah & Fernanda Madaloni",
+        file: "Maranata - Avivah & Fernanda Madaloni.mp3",
+    }
 ]
 
 let index = 0;
@@ -181,13 +187,24 @@ function timeChange(){
     let minutesTotal = Math.floor(audio.duration / 60);
     let secondsTotal = Math.round(audio.duration % 60);
 
+    if (minutes < 10){
+        minutes = "0" + minutes;
+    }
+    if (seconds < 10){
+        seconds = "0" + seconds;
+    }
+    if (minutesTotal < 10){
+        minutesTotal = "0" + minutesTotal;
+    }
+    if (secondsTotal < 10){
+        secondsTotal = "0" + secondsTotal;
+    }
+
     timelapse.innerText = minutes + ":" + seconds + " / " + minutesTotal + ":" + secondsTotal;
 
     autoMusicChange(); 
 
 }
-
-
 
 setInterval(timeChange, 1000)
 
@@ -199,5 +216,7 @@ function volumeChange(){
     volumeStatus = volumeRange.value/100;
 
     audio.volume = volumeStatus;
+
+    volumeValue.innerText = Math.floor(volumeStatus * 100);
 
 }
