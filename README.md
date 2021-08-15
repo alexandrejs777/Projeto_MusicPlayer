@@ -8,7 +8,7 @@ Este é um projeto desenvolvido para o curso Desenvolvimento Web - Do zero ao pr
 
 Criar um player de música com botões e eventos utilizando a linguagem Javascript.
 
-<h2>Recursos Utilizados</h2>
+<h2>Recursos utilizados</h2>
 
 <ul>
   <li>HTML 5</li>
