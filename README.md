@@ -21,4 +21,17 @@
   
 <h2>Playlist</h2>
 
+Sonda-me, Usa-me     - Aline Barros
+Preciso de Ti        - Ana Paula Valadão
+Tua Graça Me Basta   - Davi Sacer
+Raridade             - Anderson Freire
+Hosana               - Gabriela Rocha & Lukas Agustinho
+Teu Reino            - Cristo Vivo
+Deus da Minha Vida   - Thalles Roberto
+Alívio               - Jessé Aguiar
+Deus Proverá         - Gabriela Gomes
+Sobre as Águas       - Davi Sacer
+Caminho no Deserto   - Soraya Moraes
+Maranata             - Avivah & Fernanda Madaloni
+Eu Escolho Deus      - Thalles Roberto
 
