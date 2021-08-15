@@ -1,6 +1,4 @@
-<-- # Projeto_MusicPlayer -->
-
-<h1>Projeto Player de Músicas</h1>
+# Projeto MusicPlayer
 
 <h2>Descrição</h2>
 
