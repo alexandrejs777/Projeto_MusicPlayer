@@ -10,7 +10,7 @@
 
 <h2>Recursos utilizados</h2>
 
-  <img width="150px" src="https://user-images.githubusercontent.com/85634326/129466078-52ab8e30-b728-4c3e-99f6-1f11ed42ecd6.png"> <img width="150px" src="https://user-images.githubusercontent.com/85634326/129466080-01002450-b2d7-4a54-a076-92c30b256f6f.png"> <img width="256px" src="https://user-images.githubusercontent.com/85634326/129466083-1a023165-93b1-48a2-8e76-8a8376c8208f.png">
+  <img width="100px" src="https://user-images.githubusercontent.com/85634326/129466078-52ab8e30-b728-4c3e-99f6-1f11ed42ecd6.png"> <img width="100px" src="https://user-images.githubusercontent.com/85634326/129466080-01002450-b2d7-4a54-a076-92c30b256f6f.png"> <img width="150px" src="https://user-images.githubusercontent.com/85634326/129466083-1a023165-93b1-48a2-8e76-8a8376c8208f.png">
  
 <h2>Link de acesso</h2>
 
