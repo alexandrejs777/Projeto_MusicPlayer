@@ -17,6 +17,8 @@
 
   <a href="https://alexandrejs777.github.io/Projeto_MusicPlayer/">https://alexandrejs777.github.io/Projeto_MusicPlayer/</a>
   
+  <img width="800px" src="https://user-images.githubusercontent.com/85634326/129466634-2aa865c0-692a-42b5-a172-9c8190990081.png">
+  
 <h2>Playlist</h2>
 
 
