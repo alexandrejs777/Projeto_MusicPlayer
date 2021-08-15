@@ -17,7 +17,12 @@
 
   <a href="https://alexandrejs777.github.io/Projeto_MusicPlayer/">https://alexandrejs777.github.io/Projeto_MusicPlayer/</a>
   
+  Desktop:
   <img width="800px" src="https://user-images.githubusercontent.com/85634326/129466634-2aa865c0-692a-42b5-a172-9c8190990081.png">
+  
+  Smartphone:
+  <img width="400px" src="![MusicPlayerSP](https://user-images.githubusercontent.com/85634326/129467228-18b042a9-dd07-4955-aaa4-0e2a2e343bb4.png)
+">
   
 <h2>Playlist</h2>
 
