@@ -2,7 +2,8 @@
 
 <h2>Descrição</h2>
 
-  Este é um projeto desenvolvido para o curso Desenvolvimento Web - Do zero ao primeiro projeto do professor Igor Oliveira. O tema utilizado é música gospel.
+  Este é um projeto desenvolvido para o curso Desenvolvimento Web - Do zero ao primeiro projeto do professor Igor Oliveira, módulo de HTML 5 avançado. Tema utilizado:
+  Música gospel.
 
 <h2>Objetivo</h2>
 
@@ -15,3 +16,7 @@
 <h2>Link de acesso</h2>
 
   <a href="https://alexandrejs777.github.io/Projeto_MusicPlayer/">https://alexandrejs777.github.io/Projeto_MusicPlayer/</a>
+  
+<h2>Playlist</h2>
+
+
