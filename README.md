@@ -15,7 +15,7 @@ Criar um player de música com botões e eventos utilizando a linguagem Javascri
 
   <li>CSS 3</li>![CSS3](https://user-images.githubusercontent.com/85634326/129465398-28f7110c-4720-41ae-8ef8-150a07b168a6.png)
   
-  <li>Javascript</li>![JS](https://user-images.githubusercontent.com/85634326/129465413-7673c5bd-b578-4a6d-8bac-e64d2fd0a147.png)
+  <li><img src="https://user-images.githubusercontent.com/85634326/129465413-7673c5bd-b578-4a6d-8bac-e64d2fd0a147.png"Javascript</li>![JS](https://user-images.githubusercontent.com/85634326/129465413-7673c5bd-b578-4a6d-8bac-e64d2fd0a147.png)
 
  </ul>
  
