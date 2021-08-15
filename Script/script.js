@@ -10,6 +10,9 @@ let volumeRange = document.getElementById("volumeRange");
 let volumeValue = document.getElementById("volumeValue");
 let volumeIcon = document.getElementById("volumeIcon");
 
+
+/* Objeto tracks com as músicas utilizadas no player */
+
 var tracks = [
     {
         title: "Sonda-me, Usa-me",
@@ -88,6 +91,8 @@ var tracks = [
     }    
 ]
 
+/* Aqui é criado o index que vai ser utilizado para controlar as faixas de música do nosso player, e a função audioPlayer(index) vair carregar estes itens */
+
 let index = 0;
 
 function audioPlayer(index){
@@ -120,29 +125,6 @@ function previousTrack() {
 
 }
 
-function play() {
-
-    if (audioPlaying == false){
-        audio.play();
-        btnPlayAndPause.setAttribute("src", "./Assets/Images/2x/pause.png");
-        return audioPlaying = true;
-    } else {
-        audio.pause()
-        btnPlayAndPause.setAttribute("src", "./Assets/Images/2x/play.png");
-        return audioPlaying = false;
-    }
-    
-}
-
-function stop() {
-
-    audio.pause();
-    btnPlayAndPause.setAttribute("src", "./Assets/Images/2x/play.png");
-    audio.currentTime = 0;
-    return audioPlaying = false;
-
-}
-
 function nextTrack() {
 
     if (index == tracks.length){
@@ -169,6 +151,31 @@ function autoMusicChange(){
     }
 
 }
+
+function play() {
+
+    if (audioPlaying == false){
+        audio.play();
+        btnPlayAndPause.setAttribute("src", "./Assets/Images/2x/pause.png");
+        return audioPlaying = true;
+    } else {
+        audio.pause()
+        btnPlayAndPause.setAttribute("src", "./Assets/Images/2x/play.png");
+        return audioPlaying = false;
+    }
+    
+}
+
+function stop() {
+
+    audio.pause();
+    btnPlayAndPause.setAttribute("src", "./Assets/Images/2x/play.png");
+    audio.currentTime = 0;
+    return audioPlaying = false;
+
+}
+
+
 
 timeRange.addEventListener("input", time);
 
