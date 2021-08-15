@@ -5,8 +5,10 @@ let trackName = document.getElementById("trackName");
 let artistName = document.getElementById("artistName");
 let timeRange = document.getElementById("timeRange");
 let timelapse = document.getElementById("timelapse");
+let volumeMute = document.getElementById("btnVolumeMute");
 let volumeRange = document.getElementById("volumeRange");
 let volumeValue = document.getElementById("volumeValue");
+let volumeIcon = document.getElementById("volumeIcon");
 
 var tracks = [
     {
@@ -75,16 +77,15 @@ var tracks = [
     }
     ,
     {
+        title: "Maranata",
+        singer: "Avivah & Fernanda Madaloni",
+        file: "./Assets/Music/Maranata - Avivah & Fernanda Madaloni.mp3",
+    },
+    {
         title: "Eu Escolho Deus",
         singer: "Thalles Roberto",
         file: "./Assets/Music/Eu Escolho Deus - Thalles Roberto.mp3",
-    }
-    ,
-    {
-        title: "Maranata",
-        singer: "Avivah & Fernanda Madaloni",
-        file: "Maranata - Avivah & Fernanda Madaloni.mp3",
-    }
+    }    
 ]
 
 let index = 0;
@@ -208,7 +209,26 @@ function timeChange(){
 
 setInterval(timeChange, 1000)
 
-let volumeStatus = 0;
+let mutedSound = false;
+
+function muteSound(){
+    
+    if (mutedSound == false){
+        audio.volume = 0;
+        volumeIcon.setAttribute("src", "./Assets/Images/1x/volumeMuted.png");
+        volumeMute.style.border = "solid 1px goldenrod";
+        return mutedSound = true;
+        
+    } else {
+        audio.volume = volumeRange.value/100;
+        volumeIcon.setAttribute("src", "./Assets/Images/1x/volumeUp.png");
+        volumeMute.style.border = "solid 1px white";
+        return mutedSound = false;
+    }
+    
+}
+
+let volumeStatus;
 volumeRange.addEventListener("input", volumeChange);
 
 function volumeChange(){
@@ -218,5 +238,13 @@ function volumeChange(){
     audio.volume = volumeStatus;
 
     volumeValue.innerText = Math.floor(volumeStatus * 100);
+
+    if (volumeStatus == 0){
+        volumeIcon.setAttribute("src", "./Assets/Images/1x/volumeMuted.png");
+        return mutedSound = true;
+    } else {
+        volumeIcon.setAttribute("src", "./Assets/Images/1x/volumeUp.png");
+        return mutedSound = false;
+    }
 
 }
