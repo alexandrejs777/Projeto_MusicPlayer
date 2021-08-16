@@ -39,6 +39,10 @@ body {
     padding: 2px;
 }
 
+.button, .range {
+    cursor: pointer;
+}
+
 .musicText {
     text-align: center;
     padding: 10px;
