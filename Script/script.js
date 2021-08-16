@@ -105,9 +105,12 @@ function audioPlayer(index){
 
 }
 
-audioPlayer(index);
+audioPlayer(index);             /* Executa a função audioPlayer() */
 
-let audioPlaying = false;
+let audioPlaying = false;       /* Define se e o audio está em execução ou não */
+
+
+/* Volta para a faixa anterior, faixa seguinte e a função autoMusicChange() troca para a próxima música de forma automática, assim que a anterior atingir o seu tempo máximo */
 
 function previousTrack() {
 
@@ -152,6 +155,8 @@ function autoMusicChange(){
 
 }
 
+/* Executa o audio atual, e faz a troca do botão play e pause */
+
 function play() {
 
     if (audioPlaying == false){
@@ -166,6 +171,8 @@ function play() {
     
 }
 
+/* Para a música atual, e muda o botão para o padrão de play */
+
 function stop() {
 
     audio.pause();
@@ -176,6 +183,7 @@ function stop() {
 }
 
 
+/* Abaixo é feito o controle de tempo das músicas */
 
 timeRange.addEventListener("input", time);
 
@@ -184,6 +192,8 @@ function time(){
     audio.currentTime = timeRange.value;
 
 }
+
+/* Na função timeChange(), é controlado o tempo do audio pelo input range, e padroniza o display do tempo atual e do tempo total da música em execução */
 
 function timeChange(){
 
@@ -214,7 +224,10 @@ function timeChange(){
 
 }
 
-setInterval(timeChange, 1000)
+setInterval(timeChange, 1000)           /* Aqui executa o timeChange a cada segundo */
+
+
+/* Abaixo são os controles de som e volume */
 
 let mutedSound = false;
 
